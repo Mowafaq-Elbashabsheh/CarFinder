@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CarFinder.Application\CarFinder.Application.csproj" />
+    <ProjectReference Include="..\CarFinder.Infrastructure\CarFinder.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
