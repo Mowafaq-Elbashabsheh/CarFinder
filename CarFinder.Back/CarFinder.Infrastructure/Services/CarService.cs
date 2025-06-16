@@ -48,7 +48,7 @@ namespace CarFinder.Infrastructure.Services
         public async Task<GetModelsResp> GetModelsForMakeId(int id, int year)
         {
             var httpClient = _httpClientFactory.CreateClient();
-            var url = $"https://vpic.nhtsa.dot.gov/api/vehicles/GetVehicleTypesForMakeId/{id}?format=json";
+            var url = $"https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeIdYear/makeId/{id}/modelyear/{year}?format=json";
             var response = await httpClient.GetAsync(url);
             if (response.IsSuccessStatusCode)
             {
