@@ -1,0 +1,23 @@
+.vehicle-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.vehicle-type-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+h2{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}

@@ -1,0 +1,9 @@
+<div class="container p-4">
+    <h2>{{carModels[0].make_Name}}</h2>
+
+    <div class="vehicle-types">
+    <div class="vehicle-type-card" *ngFor="let model of carModels">
+        {{ model.model_Name }}
+    </div>
+    </div>
+</div>

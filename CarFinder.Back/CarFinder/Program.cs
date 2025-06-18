@@ -3,6 +3,16 @@ using CarFinder.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularDevClient",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:4200")
+                .AllowAnyHeader().AllowAnyMethod();
+        });
+});
+
 // Add services to the container.
 
 builder.Services.AddScoped<ICarService, CarService>();
@@ -14,6 +24,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseCors("AllowAngularDevClient");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

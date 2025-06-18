@@ -1,0 +1,21 @@
+.car-make-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* wrap on smaller screens */
+  gap: 1rem; /* space between items */
+}
+
+.car-make-list li {
+  background-color: #f3f4f6; /* light gray */
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
